@@ -1,0 +1,413 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+h1 {
+  font-size: 5.5em;
+}
+
+h2 {
+  font-size: 2.7em;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+p {
+  font-size: 1.25em;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  font-size: 1.25em;
+}
+
+button {
+  font-size: 1.25em;
+  font-weight: bold;
+  padding: 10px 30px;
+  border-radius: 5px;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  color: white;
+  background-color: rgb(43, 107, 226);
+}
+
+button:hover {
+  background-color: #0c2d69;
+  box-shadow: 0 0 10px #0c2d69, 0 0 20px #0c2d69, 0 0 40px #0c2d69;
+  transition-delay: 1ms;
+}
+
+.color-acento {
+  color: rgb(3, 22, 133);
+}
+
+header {
+  background-color: hsla(216deg, 76%, 53%, 0.671);
+}
+
+header .logo {
+  margin: 0;
+  padding: 25px 30px;
+  font-weight: bold;
+  color: hwb(216 1% 69%);
+  font-size: 1.6em;
+}
+
+header .contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header nav {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+header p {
+  padding: 5px 12px;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+header p:hover {
+  color: hwb(145 1% 43%);
+}
+
+header a {
+  padding: 5px 12px;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+header a:hover {
+  color: hwb(145 1% 43%);
+}
+
+#portada {
+  background-image: url("/assets/img/portada1.png");
+  background-size: cover;
+  background-position: center center;
+  height: 840px;
+  display: none;
+}
+
+#titulo .contenedor__titulo {
+  text-align: center;
+  padding: 120px 10px;
+}
+
+#productos {
+  background-color: rgb(3, 22, 133);
+  color: white;
+  text-align: center;
+}
+
+#productos .contenedor {
+  padding: 150px 12px;
+}
+
+#produtos h2 {
+  margin-top: 0;
+  font-size: 3.2em;
+}
+
+#productos p {
+  display: none;
+}
+
+#productos .carta {
+  background-position: center center;
+  background-size: cover;
+  padding: 50px 0px;
+  margin: 30px;
+  border-radius: 15px;
+}
+
+.carta:first-child {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/img/jabon.png");
+}
+
+.carta:nth-child(2) {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/img/suav.png");
+}
+
+.carta:nth-child(3) {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/img/lavandina.png");
+}
+
+#caracteristicas .contenedor {
+  text-align: center;
+  padding: 250px 12px;
+}
+
+#caracteristicas h2 {
+  margin-top: 0;
+  font-size: 3.2em;
+  color: #0c2d69;
+  margin-left: 150px;
+}
+
+#caracteristicas li {
+  margin: 15px 0px;
+  font-weight: bold;
+}
+
+#redes {
+  width: 100%;
+  height: 65px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+
+#redes h3 {
+  font-size: 3.2em;
+  color: #0c2d69;
+}
+
+footer {
+  background-color: rgb(230, 230, 230);
+}
+
+footer p {
+  margin: 0;
+  padding: 12px;
+  color: rgb(100, 100, 100);
+}
+
+footer .contenedor {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+@media (min-width: 850px) {
+  header {
+    position: fixed;
+    width: 100%;
+  }
+  header .contenedor {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  header nav {
+    flex-direction: row;
+    padding-bottom: 0;
+    padding-right: 20px;
+  }
+  #portada {
+    display: block;
+  }
+  #portada h1 {
+    font-size: 5em;
+  }
+  #titulo .contenedor__titulo {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  #titulo .texto {
+    width: 50%;
+    max-width: 600px;
+    text-align: initial;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #titulo h1 {
+    margin-top: 0px;
+  }
+  #titulo .imagen {
+    background-image: url("/assets/img/accion.png");
+    background-size: cover;
+    background-position: center center;
+    height: 400px;
+    width: 400px;
+  }
+  #productos .programas {
+    display: flex;
+    justify-content: center;
+  }
+  #productos p {
+    display: block;
+    margin-bottom: 30px;
+  }
+  #productos h2 {
+    font-size: 4em;
+  }
+  #productos h3 {
+    margin-top: 0;
+  }
+  #productos .carta {
+    padding: 50px;
+    background-size: 100% 150px;
+    background-repeat: no-repeat;
+    background-position-y: 0;
+    background-color: rgb(50, 50, 50);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  }
+  .carta:first-child {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/img/jabon.png");
+  }
+  .carta:nth-child(2) {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/img/suav.png");
+  }
+  .carta:nth-child(3) {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/img/lavandina.png");
+  }
+  #caracteristicas {
+    background-image: url("/assets/img/pie.png");
+    background-repeat: no-repeat;
+    background-size: 500px 400px;
+    background-position: calc(100vw - 500px) 120px;
+  }
+  #caracteristicas .contenedor {
+    text-align: initial;
+    margin-left: 100px;
+  }
+  #caracteristicas ul {
+    margin-left: 90px;
+  }
+  #redes h3 {
+    margin-top: 0;
+    font-size: 3.2em;
+    color: #c2d2ee;
+    -webkit-margin-after: 60px;
+            margin-block-end: 60px;
+  }
+  footer .contenedor {
+    justify-content: flex-end;
+  }
+}
+@media (min-width: 375px) {
+  #redes h3 {
+    margin-top: 0;
+    font-size: 2em;
+  }
+  #portada {
+    background-image: url("/assets/img/portada1.png");
+  }
+  #caracteristicas h2 {
+    text-align: justify;
+    margin-left: auto;
+    font-size: 3.2em;
+    color: #0c2d69;
+    margin-left: 70px;
+  }
+}
+@media (min-width: 1200px) {
+  #caracteristicas {
+    background-position-x: calc(100vw - 800px);
+  }
+  #redes h3 {
+    margin-top: 0;
+    font-size: 3.2em;
+    color: #0c2d69;
+    -webkit-margin-after: 60px;
+            margin-block-end: 60px;
+  }
+}
+/* somos.html */
+#somos .contenedor__titulo {
+  text-align: center;
+  padding: 120px 10px;
+}
+
+#somos .contenedor__titulo {
+  display: table-caption;
+  justify-content: space-evenly;
+  margin: 0%;
+  padding: 0%;
+}
+
+#somos .contenedor__titulo h1 {
+  font-size: 4.5em;
+  text-align: center;
+  color: #0c2d69;
+}
+
+#somos .contenedor__titulo p {
+  font-size: 1.5em;
+  text-align: justify;
+  font-style: oblique;
+}
+
+#somos .imagen {
+  background-image: url("/assets/img/lavandina.png");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  width: 1500px;
+}
+
+/* productos.html */
+#redes__productos {
+  background-color: #c9dce6;
+  width: 100%;
+  height: 65px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+
+#redes__productos h3 {
+  font-size: 3.2em;
+  color: #0c2d69;
+}
+
+/* ventas.html */
+.ventas__boton {
+  font-size: 1.25em;
+  font-weight: bold;
+  padding: 10px 30px;
+  border-radius: 5px;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.ventas__boton:hover {
+  background-color: hwb(0 2% 33%);
+  box-shadow: 0 0 10px #0c2d69, 0 0 20px #0c2d69, 0 0 40px #0c2d69;
+  transition-delay: 1ms;
+}
+
+footer {
+  background-color: rgb(230, 230, 230);
+}
+
+footer p {
+  margin: 0;
+  padding: 12px;
+  color: rgb(100, 100, 100);
+}
+
+footer .contenedor {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}/*# sourceMappingURL=main.css.map */
